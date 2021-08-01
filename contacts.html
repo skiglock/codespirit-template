@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codespirit</title>
+</head>
+<body class="page__body">
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="./img/logotype.png" alt="">
+    </a>
+    <nav class="main-nav" aria-label="Основное меню" itemscope="itemscope" itemtype="http://www.schema.org/SiteNavigationElement">
+      <ul class="main-nav__list">
+        <li class="main-nav__item" itemprop="name">
+          <a href="#">Что мы делаем?</a>
+        </li>
+        <li class="main-nav__item" itemprop="name">
+          <a href="#">О студии</a>
+
+        </li>
+        <li class="main-nav__item" itemprop="name">
+          <a href="#">Портфолио</a>
+        </li>
+        <li class="main-nav__item" itemprop="name">
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="button" role="button">Связаться</button>
+  </header>
+  <main class="main">
+    <section class="inner-content contacts">
+      <div class="inner-content__wrapper">
+        <header class="inner-content__header">
+          <h1 class="inner-content__title">
+            Контакты
+          </h1>
+        </header>
+        <div class="contacts__location">
+          <h1>Чувашская республика</h1>
+          <h2>Чебоксары</h2>
+        </div>
+        <h3>
+          Свяжитесь с нами!
+        </h3>
+        <div class="form-block">
+          <div class="form-block__left">
+            <form class="form" action="">
+              <div class="form__group">
+                <label for="form-name" class="form__label">Имя</label>
+                <input class="form__text" aria-label="Введите имя" type="text" name="name" id="form-name" required placeholder="Имя">
+              </div>
+              <div class="form__group">
+                <label for="form-phone" class="form__label">Телефон</label>
+                <input class="form__text" aria-label="Введите телефон" type="tel" name="phone" id="form-phone" required placeholder="Телефон" >
+              </div>
+              <button class="form__button button" type="submit">Оставить заявку</button>
+              <span class="form__agree">
+                * Нажимая кнопку, вы даете согласие на обработку персональных данных
+              </span>
+            </form>
+          </div>
+          <div class="form-block__right">
+            <h1 class="form-block__title">
+              Свяжитесь с нами позвонив по телефону: 
+            </h1>
+            <div class="form-block__phone">
+              <h2>+7 996 850 26 93</h2>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__social">
+          <a href="#">VK</a>
+          <a href="#">INSTAGRAM</a>
+          <a href="#">TELEGRAM</a>
+        </div>
+      </div>
+    </section>
+    <section class="promo">
+      <div class="promo__wrapper slider">
+        <input class="slider__switch" type="radio" name="promo" id="promo-switch-1">
+        <input class="slider__switch" type="radio" name="promo" id="promo-switch-2">
+        <input class="slider__switch" type="radio" name="promo" id="promo-switch-3">
+        <div class="promo__toggles slider__toggles">
+          <label for="promo-switch-1" class="slider__toggle"></label>
+          <label for="promo-switch-2" class="slider__toggle"></label>
+          <label for="promo-switch-3" class="slider__toggle"></label>
+        </div>
+        <div class="promo__block">
+          <div class="promo__img">
+            <img src="" alt="">
+          </div>
+          <h1 class="promo__title">
+            Ваша идея
+            Наше воплощение!
+          </h1>
+          <button class="promo__button button" role="button">
+            Оставить заявку
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__promo">
+          <h1>Ждем вас!</h1>
+          <button class="footer__button button" role="button">
+            Оставить заявку
+          </button>
+        </div>
+        <div class="footer__info">
+          <div class="footer__contacts">
+            <a class="footer__contacts-item">
+              +7 996 850 26 93
+            </a>
+            <a class="footer__contacts-item">
+              info@codespirit.ru
+            </a>
+          </div>
+          <div class="footer__social">
+            <a class="footer__social-item" href="#">
+              VK
+            </a>
+            <a class="footer__social-item" href="#">
+              Instagram
+            </a>
+          </div>
+        </div>
+        <div class="footer__menu" role="navigation" aria-label="Нижнее меню" itemscope="itemscope" itemtype="http://www.schema.org/SiteNavigationElement"></div>>
+          <div class="footer__list">
+            <li itemprop="name">
+              <a>О студии</a>
+            </li>
+            <li itemprop="name">
+              <a>Портфолио</a>
+            </li>
+            <li itemprop="name">
+              <a>Что делаем?</a>
+            </li>
+            <li itemprop="name">
+              <a>Контакты</a>
+            </li>
+          </div>
+        </div>
+        <div class="footer__bottom" role="contentinfo">
+          <span class="footer__copyright">© 2020 CODESPIRIT. Все права защищены</span>
+          <div class="footer__docs">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Политика обработки данных</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
