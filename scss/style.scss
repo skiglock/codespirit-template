@@ -1,0 +1,23 @@
+@import "./fonts";
+
+.page {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  &__body {
+    margin: 0;
+    font-family: "HebarExtraLight-Normal", sans-serif;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #ffeab3;
+    word-wrap: break-word;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@import "./header";
+
+@import "./main-nav";

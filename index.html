@@ -4,35 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" class="rel" />
     <title>Codespirit</title>
   </head>
   <body class="page__body">
     <header class="header">
-      <a href="#" class="logo">
-        <img src="./img/logotype.png" alt="" />
-      </a>
-      <nav
-        class="main-nav"
-        aria-label="Основное меню"
-        itemscope
-        itemtype="http://www.schema.org/SiteNavigationElement"
-      >
-        <ul class="main-nav__list">
-          <li class="main-nav__item" itemprop="name">
-            <a href="#" itemprop="url">Что мы делаем?</a>
-          </li>
-          <li class="main-nav__item" itemprop="name">
-            <a href="#" itemprop="url">О студии</a>
-          </li>
-          <li class="main-nav__item" itemprop="name">
-            <a href="#" itemprop="url">Портфолио</a>
-          </li>
-          <li class="main-nav__item" itemprop="name">
-            <a href="#" itemprop="url">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="button" type="button">Связаться</button>
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <img src="./img/logotype.png" alt="" />
+        </div>
+        <nav
+          class="main-nav main-nav--closed"
+          aria-label="Основное меню"
+          itemscope
+          itemtype="http://www.schema.org/SiteNavigationElement"
+        >
+          <ul class="main-nav__list">
+            <li class="main-nav__item" itemprop="name">
+              <a href="#" itemprop="url">Что мы делаем?</a>
+            </li>
+            <li class="main-nav__item" itemprop="name">
+              <a href="#" itemprop="url">О студии</a>
+            </li>
+            <li class="main-nav__item" itemprop="name">
+              <a href="#" itemprop="url">Портфолио</a>
+            </li>
+            <li class="main-nav__item" itemprop="name">
+              <a href="#" itemprop="url">Контакты</a>
+            </li>
+          </ul>
+          <button class="main-nav__burger" type="button">Открыть меню</button>
+        </nav>
+        <button class="button header__button" type="button">Связаться</button>
+      </div>
     </header>
     <main class="main">
       <section class="site-content service">
@@ -163,5 +167,13 @@
         </div>
       </footer>
     </main>
+    <script>
+      let main_nav = document.querySelector(".main-nav");
+      let burger = document.querySelector(".main-nav__burger");
+      burger.addEventListener("click", () => {
+        main_nav.classList.remove("main-nav--closed");
+        main_nav.classList.add("main-nav--opened");
+      });
+    </script>
   </body>
 </html>

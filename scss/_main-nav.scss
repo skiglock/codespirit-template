@@ -1,0 +1,123 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 30px;
+  @media screen and (max-width: 576px) {
+    align-items: stretch;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 15px;
+    @media screen and (min-width: 992px) {
+      column-gap: 50px;
+    }
+  }
+  &__item {
+    a {
+      text-decoration: none;
+      color: #252525;
+    }
+  }
+  &__burger {
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 30px;
+    font-size: 0;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 25px;
+      height: 4px;
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0 8px 0 0 #000;
+    }
+  }
+  &--closed {
+    .main-nav__list {
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+    .main-nav__burger {
+      @media screen and (min-width: 576px) {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+  &--opened {
+    @media screen and (max-width: 576px) {
+      z-index: 40;
+      display: block;
+      padding: 80px 20px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      background-color: #f7f7f7;
+      overflow: hidden;
+      border-bottom-left-radius: 20px;
+      .main-nav__list {
+        margin-left: 15%;
+      }
+      .main-nav__item + .main-nav__item {
+        margin-top: 15%;
+      }
+      .main-nav__list {
+        display: block;
+      }
+      .main-nav__item {
+        a {
+          color: #161616;
+        }
+      }
+    }
+    .main-nav__burger {
+      position: absolute;
+      margin-top: 16px;
+      margin-right: 8px;
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+      &::after {
+        transform: rotate(-45deg);
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        bottom: 0;
+        width: 25px;
+        height: 4px;
+        background-color: #000;
+        border-radius: 10px;
+      }
+    }
+    .main-nav__burger {
+      @media screen and (min-width: 576px) {
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
