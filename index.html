@@ -19,6 +19,7 @@
           itemscope
           itemtype="http://www.schema.org/SiteNavigationElement"
         >
+          <button class="main-nav__burger" type="button">Открыть меню</button>
           <ul class="main-nav__list">
             <li class="main-nav__item" itemprop="name">
               <a href="#" itemprop="url">Что мы делаем?</a>
@@ -33,9 +34,10 @@
               <a href="#" itemprop="url">Контакты</a>
             </li>
           </ul>
-          <button class="main-nav__burger" type="button">Открыть меню</button>
         </nav>
-        <button class="button header__button" type="button">Связаться</button>
+        <button class="header__button button button--primary" type="button">
+          Связаться
+        </button>
       </div>
     </header>
     <main class="main">
@@ -58,7 +60,9 @@
                   программирование на стороне клиента и сервера, а также
                   конфигурирование веб-сервера.
                 </p>
-                <button class="item-service__button button">Перейти</button>
+                <button class="item-service__button button button--primary">
+                  Перейти
+                </button>
               </div>
             </div>
             <div class="service__item item-service">
@@ -74,7 +78,27 @@
                   программирование на стороне клиента и сервера, а также
                   конфигурирование веб-сервера.
                 </p>
-                <button class="item-service__button button">Перейти</button>
+                <button class="item-service__button button button--primary">
+                  Перейти
+                </button>
+              </div>
+            </div>
+            <div class="service__item item-service">
+              <div class="item-service__name">
+                <span class="item-service__number"> 1 </span>
+                <h2 class="item-service__title">Web разработка</h2>
+              </div>
+              <div class="item-service__description">
+                <h3>Web-разработка</h3>
+                <p>
+                  Процесс создания веб-сайта или веб-приложения. Основными
+                  этапами процесса являются веб-дизайн, вёрстка страниц,
+                  программирование на стороне клиента и сервера, а также
+                  конфигурирование веб-сервера.
+                </p>
+                <button class="item-service__button button button--primary">
+                  Перейти
+                </button>
               </div>
             </div>
           </div>
@@ -107,40 +131,41 @@
           </div>
           <div class="promo__block">
             <div class="promo__img">
-              <img src="" alt="" />
+              <img src="./img/promo.png" alt="" />
             </div>
-            <h1 class="promo__title">Ваша идея Наше воплощение!</h1>
+            <h2 class="promo__title">Ваша идея Наше воплощение!</h2>
             <button class="promo__button button" type="button">
               Оставить заявку
             </button>
           </div>
         </div>
       </section>
-      <footer class="footer">
-        <div class="footer__wrapper">
-          <div class="footer__promo">
-            <h1>Ждем вас!</h1>
-            <button class="footer__button button" type="button">
-              Оставить заявку
-            </button>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__promo">
+          <h2>Ждем вас!</h2>
+          <button class="footer__button button" type="button">
+            Оставить заявку
+          </button>
+        </div>
+        <div class="footer__info">
+          <div class="footer__contacts">
+            <a class="footer__contacts-item"> +7 996 850 26 93 </a>
+            <a class="footer__contacts-item"> info@codespirit.ru </a>
           </div>
-          <div class="footer__info">
-            <div class="footer__contacts">
-              <a class="footer__contacts-item"> +7 996 850 26 93 </a>
-              <a class="footer__contacts-item"> info@codespirit.ru </a>
-            </div>
-            <div class="footer__social">
-              <a class="footer__social-item" href="#"> VK </a>
-              <a class="footer__social-item" href="#"> Instagram </a>
-            </div>
+          <div class="footer__social">
+            <a class="footer__social-item" href="#"> VK </a>
+            <a class="footer__social-item" href="#"> Instagram </a>
           </div>
-          <div
-            class="footer__menu"
-            role="navigation"
-            aria-label="Нижнее меню"
-            itemscope
-            itemtype="http://www.schema.org/SiteNavigationElement"
-          ></div>
+        </div>
+        <div
+          class="footer__menu"
+          role="navigation"
+          aria-label="Нижнее меню"
+          itemscope
+          itemtype="http://www.schema.org/SiteNavigationElement"
+        >
           <div class="footer__list">
             <li itemprop="name">
               <a itemprop="url">О студии</a>
@@ -156,17 +181,17 @@
             </li>
           </div>
         </div>
-        <div class="footer__bottom" role="contentinfo">
+      </div>
+      <div class="footer__bottom" role="contentinfo">
+        <div class="footer__docs">
           <span class="footer__copyright"
             >© 2020 CODESPIRIT. Все права защищены</span
           >
-          <div class="footer__docs">
-            <a href="#">Политика конфиденциальности</a>
-            <a href="#">Политика обработки данных</a>
-          </div>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Политика обработки данных</a>
         </div>
-      </footer>
-    </main>
+      </div>
+    </footer>
     <script>
       let main_nav = document.querySelector(".main-nav");
       let burger = document.querySelector(".main-nav__burger");
