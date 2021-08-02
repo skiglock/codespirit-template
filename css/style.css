@@ -141,6 +141,110 @@ img {
   position: relative;
 }
 
+.main-nav--opened .main-nav__wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 45%;
+  background-color: #f7f7f7;
+  height: 100%;
+  z-index: 2;
+  padding: 60px 20px 10px 35px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+@media screen and (min-width: 460px) {
+  .main-nav--opened .main-nav__wrapper {
+    left: 55%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .main-nav--opened .main-nav__wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 0;
+    border: 0;
+    background-color: inherit;
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  list-style-type: none;
+  display: block;
+}
+
+.main-nav--opened .main-nav__list .main-nav__item + .main-nav__item {
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 576px) {
+  .main-nav--opened .main-nav__list {
+    display: -ms-grid;
+    display: grid;
+  }
+  .main-nav--opened .main-nav__list .main-nav__item + .main-nav__item {
+    margin: 0;
+  }
+}
+
+.main-nav--opened .main-nav__burger {
+  display: block;
+  z-index: 3;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -10px;
+  left: -20px;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #252525;
+  border-radius: 50%;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.main-nav--opened .main-nav__burger:hover, .main-nav--opened .main-nav__burger:active {
+  border: 1px solid #f7f7f7;
+  background-color: #252525;
+}
+
+.main-nav--opened .main-nav__burger:hover::before, .main-nav--opened .main-nav__burger:hover::after, .main-nav--opened .main-nav__burger:active::before, .main-nav--opened .main-nav__burger:active::after {
+  background-color: #fff;
+}
+
+.main-nav--opened .main-nav__burger::before {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 1px;
+  width: 15px;
+  top: 11px;
+  left: 4px;
+}
+
+.main-nav--opened .main-nav__burger::after {
+  width: 15px;
+  border-radius: 10px;
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: #252525;
+  top: 11px;
+  left: 4px;
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 576px) {
+  .main-nav--opened .main-nav__burger {
+    display: none;
+  }
+}
+
 .main-nav__list {
   display: none;
 }
@@ -190,6 +294,7 @@ img {
   position: absolute;
   content: "";
   height: 4px;
+  width: 100%;
   background-color: #252525;
   top: 8px;
   left: 0;

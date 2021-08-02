@@ -14,26 +14,28 @@
           <img src="./img/logotype.png" alt="" />
         </div>
         <nav
-          class="main-nav main-nav--closed"
+          class="main-nav"
           aria-label="Основное меню"
           itemscope
           itemtype="http://www.schema.org/SiteNavigationElement"
         >
           <button class="main-nav__burger" type="button">Открыть меню</button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item" itemprop="name">
-              <a href="#" itemprop="url">Что мы делаем?</a>
-            </li>
-            <li class="main-nav__item" itemprop="name">
-              <a href="#" itemprop="url">О студии</a>
-            </li>
-            <li class="main-nav__item" itemprop="name">
-              <a href="#" itemprop="url">Портфолио</a>
-            </li>
-            <li class="main-nav__item" itemprop="name">
-              <a href="#" itemprop="url">Контакты</a>
-            </li>
-          </ul>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item" itemprop="name">
+                <a href="#" itemprop="url">Что мы делаем?</a>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a href="#" itemprop="url">О студии</a>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a href="#" itemprop="url">Портфолио</a>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a href="#" itemprop="url">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </nav>
         <button class="header__button button button--primary" type="button">
           Связаться
@@ -193,11 +195,34 @@
       </div>
     </footer>
     <script>
+      var toogle = false;
       let main_nav = document.querySelector(".main-nav");
       let burger = document.querySelector(".main-nav__burger");
+      function fadeIn(el, time) {
+        el.style.opacity = 0;
+
+        var last = +new Date();
+        var tick = function () {
+          el.style.opacity = +el.style.opacity + (new Date() - last) / time;
+          last = +new Date();
+
+          if (+el.style.opacity < 1) {
+            (window.requestAnimationFrame && requestAnimationFrame(tick)) ||
+              setTimeout(tick, 16);
+          }
+        };
+
+        tick();
+      }
       burger.addEventListener("click", () => {
-        main_nav.classList.remove("main-nav--closed");
-        main_nav.classList.add("main-nav--opened");
+        if (toogle) {
+          main_nav.classList.remove("main-nav--opened");
+          toogle = false;
+        } else {
+          main_nav.classList.add("main-nav--opened");
+          fadeIn(main_nav, 500);
+          toogle = true;
+        }
       });
     </script>
   </body>
