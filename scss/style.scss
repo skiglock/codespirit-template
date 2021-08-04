@@ -52,6 +52,13 @@ $desktop-width: 992px;
       font-size: 18px;
     }
   }
+  &--white {
+    background-color: #fff;
+    color: #252525;
+    &:hover {
+      background-color: rgba(#fff, 0.6);
+    }
+  }
   &--small {
     padding-top: 4px;
     padding-bottom: 4px;
@@ -77,6 +84,7 @@ $desktop-width: 992px;
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -84,6 +92,9 @@ img {
 // -------------------Header-------------------
 .header {
   padding: 16px 0;
+  @media screen and (min-width: $tablet-width) {
+    padding: 20px 0;
+  }
   &__wrapper {
     display: grid;
     grid-auto-flow: column;
@@ -224,7 +235,7 @@ img {
         color: $red_color;
       }
       @media screen and (min-width: $desktop-width) {
-        font-size: 18px;
+        font-size: 17px;
       }
     }
   }
@@ -283,7 +294,7 @@ img {
     padding-bottom: 16px;
     justify-content: center;
     @media screen and (min-width: $mobile-width) {
-      justify-content: flex-end;
+      justify-content: end;
     }
   }
   &__title {
@@ -452,7 +463,131 @@ img {
     }
     &-button {
       margin-top: 8px;
-      justify-self: flex-end;
+      justify-self: end;
     }
   }
+}
+
+// promo
+
+.promo {
+  &__wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    @media screen and (min-width: $small-mobile-width) {
+      grid-auto-flow: column;
+      grid-auto-columns: min-content 1fr min-content;
+      grid-auto-rows: repeat(3, 1fr);
+      grid-gap: 20px;
+      justify-items: center;
+      align-items: center;
+    }
+  }
+  &__block {
+    border: 1px solid rgba(#252525, 0.1);
+    display: grid;
+    justify-items: center;
+    grid-gap: 10px;
+    background-color: #c7aabc;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0 35px;
+    @media screen and (min-width: $small-mobile-width) {
+      margin: 0 10px;
+      grid-gap: 20px;
+      grid-auto-flow: column;
+      grid-auto-columns: min-content 1fr min-content;
+      grid-auto-rows: repeat(3, 1fr);
+    }
+    @media screen and (min-width: $mobile-width) {
+      justify-items: center;
+      align-items: center;
+      padding: 20px;
+    }
+    @media screen and (min-width: $tablet-width) {
+      padding-bottom: 15px;
+    }
+  }
+  &__img {
+    max-width: 300px;
+    border-radius: 8px;
+    img {
+      border: 1px solid rgba(#252525, 0.1);
+      border-radius: 8px;
+    }
+    @media screen and (min-width: $small-mobile-width) {
+      grid-column: span 1;
+      grid-row: span 3;
+      width: 200px;
+    }
+    @media screen and (min-width: $mobile-width) {
+      width: 250px;
+    }
+  }
+  &__title {
+    font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+    color: #fff;
+    font-size: 16px;
+    @media screen and (min-width: $small-mobile-width) {
+      text-align: left;
+      grid-column: span 2;
+      grid-row: span 2;
+      align-self: center;
+    }
+    @media screen and (min-width: $mobile-width) {
+      font-size: 19px;
+      text-align: left;
+      grid-column: span 2;
+      grid-row: span 2;
+      align-self: center;
+    }
+    @media screen and (min-width: $tablet-width) {
+      font-size: 21px;
+      justify-self: start;
+    }
+    @media screen and (min-width: $desktop-width) {
+      font-size: 23px;
+      justify-self: start;
+    }
+  }
+  &__button {
+    @media screen and (min-width: $small-mobile-width) {
+      grid-row: 3;
+      align-self: end;
+      justify-self: end;
+    }
+  }
+}
+
+// slider
+.slider {
+  &__switch {
+    display: none;
+  }
+  &__toggles {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 50px;
+  }
+  &__toggle {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    background-color: #fff;
+    box-shadow: 0px 1px 1.94px 0.06px rgba(#000, 0.17);
+  }
+}
+
+#promo-switch-1:checked ~ .promo__toggles .slider__toggle[for="promo-switch-1"],
+#promo-switch-2:checked ~ .promo__toggles .slider__toggle[for="promo-switch-2"],
+#promo-switch-3:checked ~ .promo__toggles .slider__toggle[for="promo-switch-3"] {
+  background-color: $red_color;
 }
