@@ -1,6 +1,8 @@
 @import "./fonts";
 
 // Variables
+$red_color: #eb563a;
+
 $small-mobile-width: 460px;
 $mobile-width: 576px;
 $tablet-width: 768px;
@@ -34,21 +36,37 @@ $desktop-width: 992px;
   outline: none;
   border: none;
   cursor: pointer;
-  padding: 5px 25px;
   border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.1s linear;
   &--primary {
     font-family: "HebarExtraLight-Normal", sans-serif;
-    background-color: #eb563a;
+    background-color: $red_color;
     color: #fff;
-    font-size: 16px;
     font-weight: 100;
-    transition: 0.2s linear;
     &:hover {
-      background-color: #f7785f;
+      background-color: rgba($red_color, 0.6);
     }
     @media screen and (min-width: $desktop-width) {
       font-size: 18px;
     }
+  }
+  &--small {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 15px;
+  }
+  &--medium {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 17px;
+  }
+  &--large {
+    font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
   }
 }
 
@@ -57,7 +75,7 @@ img {
   height: auto;
 }
 
-// Header
+// -------------------Header-------------------
 .header {
   padding: 16px 0;
   &__wrapper {
@@ -78,10 +96,10 @@ img {
     img {
       width: 100px;
       @media screen and (min-width: $tablet-width) {
-        width: 130px;
+        width: 110px;
       }
       @media screen and (min-width: $desktop-width) {
-        width: 140px;
+        width: 120px;
       }
     }
   }
@@ -105,7 +123,10 @@ img {
       background-color: #f7f7f7;
       height: 100%;
       z-index: 2;
-      padding: 60px 20px 10px 35px;
+      padding-top: 60px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+      padding-left: 35px;
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
       @media screen and (min-width: $small-mobile-width) {
@@ -192,12 +213,12 @@ img {
       text-decoration: none;
       color: #252525;
       font-size: 16px;
-      transition: 0.2s linear;
+      transition: 0.1s linear;
       &:hover {
-        color: #eb563a;
+        color: $red_color;
       }
       @media screen and (min-width: $desktop-width) {
-        font-size: 19px;
+        font-size: 18px;
       }
     }
   }
@@ -225,5 +246,50 @@ img {
     @media screen and (min-width: $mobile-width) {
       display: none;
     }
+  }
+}
+
+//-------------------Main-------------------
+
+.site-content {
+  &__wrapper {
+    border-radius: 20px;
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 33px;
+    @media screen and (min-width: $tablet-width) {
+      max-width: 900px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 25px;
+    }
+    @media screen and (min-width: $desktop-width) {
+      border-radius: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  &__header {
+    display: grid;
+    padding-top: 14px;
+    padding-bottom: 16px;
+    justify-content: center;
+    @media screen and (min-width: $mobile-width) {
+      justify-content: flex-end;
+    }
+  }
+  &__title {
+    font-family: "OksFree", sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 30px;
+    background-color: $red_color;
+    padding-top: 3px;
+    padding-left: 37px;
+    padding-right: 13px;
+    padding-bottom: 13px;
   }
 }
