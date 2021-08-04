@@ -56,7 +56,7 @@ $desktop-width: 992px;
     background-color: #fff;
     color: #252525;
     &:hover {
-      background-color: rgba(#fff, 0.6);
+      background-color: rgba(#fff, 0.8);
     }
   }
   &--small {
@@ -270,6 +270,7 @@ img {
 
 .site-content {
   &__wrapper {
+    box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.1);
     border-radius: 20px;
     background-color: #fff;
     padding-left: 10px;
@@ -351,6 +352,7 @@ img {
       display: grid;
       grid-template-rows: min-content 1fr;
       background-color: #68b399;
+      box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.1);
       border-radius: 25px;
       padding-top: 20px;
       padding-bottom: 50px;
@@ -401,6 +403,7 @@ img {
     padding-left: 20px;
     padding-right: 17px;
     background-color: #ffcb86;
+    box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.1);
     border-radius: 25px;
     background-image: url(../img/browser.png);
     background-repeat: no-repeat;
@@ -471,6 +474,7 @@ img {
 // promo
 
 .promo {
+  padding-bottom: 40px;
   &__wrapper {
     max-width: 900px;
     margin: 0 auto;
@@ -484,6 +488,7 @@ img {
     }
   }
   &__block {
+    box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.3);
     border: 1px solid rgba(#252525, 0.1);
     display: grid;
     justify-items: center;
@@ -590,4 +595,112 @@ img {
 #promo-switch-2:checked ~ .promo__toggles .slider__toggle[for="promo-switch-2"],
 #promo-switch-3:checked ~ .promo__toggles .slider__toggle[for="promo-switch-3"] {
   background-color: $red_color;
+}
+
+//-------------------Main-------------------
+
+.footer {
+  background-color: #f5f5f5;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 45px;
+  }
+  &__wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 30px;
+    row-gap: 20px;
+    justify-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &__promo {
+    @media screen and (max-width: 699px) {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+  &__title {
+    font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+    text-align: center;
+  }
+  &__button {
+    margin-top: 10px;
+  }
+  &__info {
+    text-align: center;
+    font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5px;
+  }
+  &__contacts {
+    display: grid;
+    row-gap: 5px;
+    &-item {
+      font-size: 18px;
+      color: #171717;
+      text-decoration: none;
+      transition: 0.1s linear;
+      &:hover {
+        color: rgba(#171717, 0.9);
+      }
+    }
+  }
+  &__social {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    &-item {
+      font-size: 18px;
+      color: #171717;
+      text-decoration: none;
+      transition: 0.1s linear;
+      &:hover {
+        color: rgba(#171717, 0.9);
+      }
+    }
+  }
+  &__menu {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+  &__list {
+    list-style: none;
+    display: grid;
+    row-gap: 8px;
+    a {
+      font-size: 18px;
+      color: #171717;
+      text-decoration: none;
+      transition: 0.1s linear;
+      &:hover {
+        color: rgba($red_color, 0.9);
+      }
+    }
+  }
+  &__bottom {
+    padding-top: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    grid-gap: 10px;
+    text-align: center;
+    a {
+      color: #171717;
+      text-decoration: none;
+      font-size: 14px;
+      &:hover {
+        color: rgba($red_color, 0.9);
+      }
+    }
+  }
 }

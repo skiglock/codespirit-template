@@ -167,18 +167,25 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__promo">
-          <h2>Ждем вас!</h2>
-          <button class="footer__button button" type="button">
+          <h2 class="footer__title">Ждем вас!</h2>
+          <button
+            class="footer__button button button--large button--primary"
+            type="button"
+          >
             Оставить заявку
           </button>
         </div>
         <div class="footer__info">
           <div class="footer__contacts">
-            <a class="footer__contacts-item"> +7 996 850 26 93 </a>
-            <a class="footer__contacts-item"> info@codespirit.ru </a>
+            <a class="footer__contacts-item" href="tel:+79968502693">
+              +7 996 850 26 93
+            </a>
+            <a class="footer__contacts-item" href="mailto:info@codespirit.ru">
+              info@codespirit.ru
+            </a>
           </div>
           <div class="footer__social">
-            <a class="footer__social-item" href="#"> VK </a>
+            <a class="footer__social-item" href="#"> Telegram </a>
             <a class="footer__social-item" href="#"> Instagram </a>
           </div>
         </div>
@@ -189,30 +196,26 @@
           itemscope
           itemtype="http://www.schema.org/SiteNavigationElement"
         >
-          <div class="footer__list">
+          <ul class="footer__list">
             <li itemprop="name">
-              <a itemprop="url">О студии</a>
+              <a href="#" itemprop="url">О студии</a>
             </li>
             <li itemprop="name">
-              <a itemprop="url">Портфолио</a>
+              <a href="#" itemprop="url">Портфолио</a>
             </li>
             <li itemprop="name">
-              <a itemprop="url">Что делаем?</a>
+              <a href="#" itemprop="url">Что делаем?</a>
             </li>
             <li itemprop="name">
-              <a itemprop="url">Контакты</a>
+              <a href="#" itemprop="url">Контакты</a>
             </li>
-          </div>
+          </ul>
         </div>
       </div>
       <div class="footer__bottom" role="contentinfo">
-        <div class="footer__docs">
-          <span class="footer__copyright"
-            >© 2020 CODESPIRIT. Все права защищены</span
-          >
-          <a href="#">Политика конфиденциальности</a>
-          <a href="#">Политика обработки данных</a>
-        </div>
+        <a>© 2020 CODESPIRIT. Все права защищены</a>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Политика обработки данных</a>
       </div>
     </footer>
     <script>
