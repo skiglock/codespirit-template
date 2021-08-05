@@ -4,35 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" class="rel" />
     <title>Codespirit</title>
   </head>
   <body class="page__body">
     <header class="header">
-      <a href="#" class="logo">
-        <img src="./img/logotype.png" alt="" />
-      </a>
-      <nav
-        class="main-nav"
-        aria-label="Основное меню"
-        itemscope
-        itemtype="http://www.schema.org/SiteNavigationElement"
-      >
-        <ul class="main-nav__list">
-          <li class="main-nav__item" itemprop="name">
-            <a href="#" itemprop="url">Что мы делаем?</a>
-          </li>
-          <li class="main-nav__item" itemprop="name">
-            <a href="#" itemprop="url">О студии</a>
-          </li>
-          <li class="main-nav__item" itemprop="name">
-            <a href="#" itemprop="url">Портфолио</a>
-          </li>
-          <li class="main-nav__item" itemprop="name">
-            <a href="#" itemprop="url">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="button" type="button">Связаться</button>
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <img src="./img/logotype.png" alt="" />
+        </div>
+        <nav
+          class="main-nav"
+          aria-label="Основное меню"
+          itemscope
+          itemtype="http://www.schema.org/SiteNavigationElement"
+        >
+          <button class="main-nav__burger" type="button">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item" itemprop="name">
+                <a href="#" itemprop="url">Что мы делаем?</a>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a href="#" itemprop="url">О студии</a>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a href="#" itemprop="url">Портфолио</a>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a href="#" itemprop="url">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <button
+          class="header__button button button--primary button--medium"
+          type="button"
+        >
+          Связаться
+        </button>
+      </div>
     </header>
     <main class="main">
       <section class="site-content">
@@ -41,6 +52,9 @@
             <h1 class="site-content__title">Сайт Landing</h1>
           </header>
           <div class="site-content__item banner-logo">
+            <div class="banner-logo__img">
+              <img src="./img/test.jpg" alt="" />
+            </div>
             <div class="banner-logo__header">
               <h1 class="banner-logo__title">LANDING PAGE</h1>
             </div>
@@ -51,8 +65,8 @@
               <div class="banner-logo__description">
                 <p>
                   Лендинг — одностраничный сайт для презентации конкретного
-                  продуктаили услуги компании. Основная цель продающего лендинг
-                  пейдж: приток целевого трафика и получение лидов.
+                  продукт или услуги компании. Основная цель продающего лендинг
+                  пейдж: приток целевого трафика и получение лидов.
                 </p>
               </div>
             </div>
@@ -60,7 +74,7 @@
           <div class="site-content__item creation-stages">
             <div class="stages__left">
               <div class="stages__img">
-                <img src="" alt="" />
+                <img src="./img/stages.png" alt="" />
               </div>
             </div>
             <div class="stages__right">
@@ -323,71 +337,78 @@
             id="promo-switch-3"
           />
           <div class="promo__toggles slider__toggles">
-            <label for="promo-switch-1" class="slider__toggle"></label>
-            <label for="promo-switch-2" class="slider__toggle"></label>
-            <label for="promo-switch-3" class="slider__toggle"></label>
+            <label class="slider__toggle" for="promo-switch-1"></label>
+            <label class="slider__toggle" for="promo-switch-2"></label>
+            <label class="slider__toggle" for="promo-switch-3"></label>
           </div>
           <div class="promo__block">
             <div class="promo__img">
-              <img src="" alt="" />
+              <img src="./img/promo.png" alt="" />
             </div>
-            <h1 class="promo__title">Ваша идея Наше воплощение!</h1>
-            <button class="promo__button button" type="button">
-              Оставить заявку
+            <h2 class="promo__title">Ваше идея, наше воплощение!</h2>
+            <button
+              class="promo__button button button--white button--small"
+              type="button"
+            >
+              Мне интересно
             </button>
           </div>
         </div>
       </section>
-      <footer class="footer">
-        <div class="footer__wrapper">
-          <div class="footer__promo">
-            <h1>Ждем вас!</h1>
-            <button class="footer__button button" type="button">
-              Оставить заявку
-            </button>
-          </div>
-          <div class="footer__info">
-            <div class="footer__contacts">
-              <a class="footer__contacts-item"> +7 996 850 26 93 </a>
-              <a class="footer__contacts-item"> info@codespirit.ru </a>
-            </div>
-            <div class="footer__social">
-              <a class="footer__social-item" href="#"> VK </a>
-              <a class="footer__social-item" href="#"> Instagram </a>
-            </div>
-          </div>
-          <div
-            class="footer__menu"
-            role="navigation"
-            aria-label="Нижнее меню"
-            itemscope
-            itemtype="http://www.schema.org/SiteNavigationElement"
-          ></div>
-          <div class="footer__list">
-            <li itemprop="name">
-              <a itemprop="url">О студии</a>
-            </li>
-            <li itemprop="name">
-              <a itemprop="url">Портфолио</a>
-            </li>
-            <li itemprop="name">
-              <a itemprop="url">Что делаем?</a>
-            </li>
-            <li itemprop="name">
-              <a itemprop="url">Контакты</a>
-            </li>
-          </div>
-        </div>
-        <div class="footer__bottom" role="contentinfo">
-          <span class="footer__copyright"
-            >© 2020 CODESPIRIT. Все права защищены</span
-          >
-          <div class="footer__docs">
-            <a href="#">Политика конфиденциальности</a>
-            <a href="#">Политика обработки данных</a>
-          </div>
-        </div>
-      </footer>
     </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__promo">
+          <h2 class="footer__title">Ждем вас!</h2>
+          <button
+            class="footer__button button button--large button--primary"
+            type="button"
+          >
+            Оставить заявку
+          </button>
+        </div>
+        <div class="footer__info">
+          <div class="footer__contacts">
+            <a class="footer__contacts-item" href="tel:+79968502693">
+              +7 996 850 26 93
+            </a>
+            <a class="footer__contacts-item" href="mailto:info@codespirit.ru">
+              info@codespirit.ru
+            </a>
+          </div>
+          <div class="footer__social">
+            <a class="footer__social-item" href="#"> Telegram </a>
+            <a class="footer__social-item" href="#"> Instagram </a>
+          </div>
+        </div>
+        <div
+          class="footer__menu"
+          role="navigation"
+          aria-label="Нижнее меню"
+          itemscope
+          itemtype="http://www.schema.org/SiteNavigationElement"
+        >
+          <ul class="footer__list">
+            <li itemprop="name">
+              <a href="#" itemprop="url">О студии</a>
+            </li>
+            <li itemprop="name">
+              <a href="#" itemprop="url">Портфолио</a>
+            </li>
+            <li itemprop="name">
+              <a href="#" itemprop="url">Что делаем?</a>
+            </li>
+            <li itemprop="name">
+              <a href="#" itemprop="url">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom" role="contentinfo">
+        <a>© 2020 CODESPIRIT. Все права защищены</a>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Политика обработки данных</a>
+      </div>
+    </footer>
   </body>
 </html>

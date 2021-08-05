@@ -63,9 +63,9 @@
 .form-block {
   border-radius: 17px;
   background-color: #48b08d;
+  box-shadow: 5px 8px 0px rgba(#48b08d, 0.6);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.2);
   @media screen and (min-width: $small-mobile-width) {
     gap: 5%;
     padding: 10px;

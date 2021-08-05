@@ -39,19 +39,22 @@ body {
 }
 
 .button {
+  font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
   outline: none;
   border: none;
   cursor: pointer;
   border-radius: 30px;
   transition: 0.1s linear;
-  box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.2);
+  box-shadow: 1px 1.5px 0px rgba(#252525, 0.6);
+  &:active {
+    box-shadow: 0.66px 1.06px 0px rgba(#252525, 0.6);
+  }
   &--primary {
-    font-family: "HebarExtraLight-Normal", sans-serif;
     background-color: $red_color;
     color: #fff;
     font-weight: 100;
     &:hover {
-      background-color: rgba($red_color, 0.6);
+      background-color: rgba($red_color, 0.8);
     }
     @media screen and (min-width: $desktop-width) {
       font-size: 18px;
@@ -59,9 +62,9 @@ body {
   }
   &--white {
     background-color: #fff;
-    color: #252525;
+    color: #313131;
     &:hover {
-      background-color: rgba(#fff, 0.8);
+      background-color: rgba(#fff, 0.5);
     }
   }
   &--yellow {
@@ -85,7 +88,6 @@ body {
     padding-right: 20px;
   }
   &--large {
-    font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 18px;
@@ -282,7 +284,6 @@ img {
 .site-content {
   padding-bottom: 40px;
   &__wrapper {
-    box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.1);
     border-radius: 20px;
     background-color: #fff;
     padding-left: 15px;
@@ -317,6 +318,7 @@ img {
     color: #fff;
     border-radius: 30px;
     background-color: $red_color;
+    box-shadow: 5px 8px 0px rgba($red_color, 0.6);
     padding-top: 3px;
     padding-left: 37px;
     padding-right: 13px;
@@ -337,7 +339,7 @@ img {
   &__items {
     display: grid;
     grid-auto-flow: row;
-    row-gap: 18px;
+    row-gap: 30px;
   }
 }
 
@@ -360,25 +362,31 @@ img {
   &:nth-child(1) {
     .item-service__name {
       background-color: #68b399;
+      box-shadow: 5px 8px 0px rgba(#68b399, 0.85);
     }
     .item-service__description {
       background-color: #ffcb86;
+      box-shadow: 5px 8px 0px rgba(#ffcb86, 0.85);
     }
   }
   &:nth-child(2) {
     .item-service__name {
       background-color: #efb051;
+      box-shadow: 5px 8px 0px rgba(#efb051, 0.85);
     }
     .item-service__description {
       background-color: #6ac7cf;
+      box-shadow: 5px 8px 0px rgba(#6ac7cf, 0.85);
     }
   }
   &:nth-child(3) {
     .item-service__name {
       background-color: $red_color;
+      box-shadow: 5px 8px 0px rgba($red_color, 0.85);
     }
     .item-service__description {
       background-color: #2d8e6d;
+      box-shadow: 5px 8px 0px rgba(#2d8e6d, 0.85);
     }
   }
   &__name {
@@ -387,7 +395,6 @@ img {
       height: 190px;
       display: grid;
       grid-template-rows: min-content 1fr;
-      box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.1);
       border-radius: 25px;
       padding-top: 20px;
       padding-bottom: 50px;
@@ -404,6 +411,7 @@ img {
         padding-left: 5px;
         font-size: 25px;
         align-self: center;
+        word-break: break-word;
       }
     }
     @media screen and (min-width: $tablet-width) {
@@ -437,7 +445,6 @@ img {
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 17px;
-    box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.1);
     border-radius: 25px;
     background-image: url(../img/browser.png);
     background-repeat: no-repeat;
@@ -522,7 +529,7 @@ img {
     }
   }
   &__block {
-    box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.3);
+    box-shadow: 5px 8px 0px rgba(#c7aabc, 0.85);
     display: grid;
     justify-items: center;
     gap: 10px;
@@ -747,3 +754,9 @@ img {
 
 /* Portfolio */
 @import "./portfolio";
+
+/* Create Site */
+@import "./create-site";
+
+/* Landing */
+@import "./landing";

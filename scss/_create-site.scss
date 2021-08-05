@@ -1,0 +1,42 @@
+.item-service {
+  &--custom {
+    &:nth-child(odd) {
+      margin-left: 10%;
+      .item-service__name {
+        background-color: #f39369;
+        box-shadow: 5px 8px 0px rgba(#f39369, 0.85);
+      }
+      .item-service__description {
+        background-color: #fccab4;
+        box-shadow: 5px 8px 0px rgba(#fccab4, 0.85);
+      }
+    }
+    &:nth-child(even) {
+      margin-right: 10%;
+      .item-service__name {
+        background-color: #9a6c6e;
+        box-shadow: 5px 8px 0px rgba(#9a6c6e, 0.85);
+      }
+      .item-service__description {
+        background-color: #efbb94;
+        box-shadow: 5px 8px 0px rgba(#efbb94, 0.85);
+      }
+    }
+    & + .item-service--custom {
+      margin-top: 5%;
+    }
+    column-gap: 0;
+    .item-service__name {
+      font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+      grid-template-rows: auto;
+    }
+    .item-service__description {
+      grid-template-rows: 1fr min-content;
+      background-image: none;
+      &-text {
+        font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+        align-self: center;
+      }
+    }
+  }
+}
