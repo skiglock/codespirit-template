@@ -2007,7 +2007,13 @@ img {
 .creation-stages__number {
   font-family: "Chalet-NewYorkNineteenEighty";
   color: #171717;
-  font-size: 28px;
+  font-size: 24px;
+}
+
+@media screen and (min-width: 991px) {
+  .creation-stages__number {
+    font-size: 28px;
+  }
 }
 
 .creation-stages__spoiler summary {
@@ -2042,5 +2048,96 @@ img {
   .creation-stages__description {
     font-size: 19px;
   }
+}
+
+.creation-needed {
+  position: relative;
+  background-color: #bfd5e3;
+  border-radius: 20px;
+  padding: 30px 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.creation-needed__header {
+  position: absolute;
+  content: "";
+  color: #fff;
+  background-color: #007785;
+  border-radius: 20px;
+  padding: 7px 10px;
+  top: -20px;
+  left: 0;
+}
+
+.creation-needed__title {
+  font-family: "Chalet-NewYorkNineteenEighty";
+  font-size: 17px;
+  text-align: center;
+}
+
+.creation-needed__bottom {
+  position: absolute;
+  content: "";
+  color: #fff;
+  background-color: #eb563a;
+  border-radius: 20px;
+  padding: 7px 10px;
+  bottom: -20px;
+  right: 0;
+}
+
+.creation-needed__subtitle {
+  font-family: "Chalet-NewYorkNineteenEighty";
+  font-size: 17px;
+  text-align: center;
+}
+
+.creation-needed__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  row-gap: 30px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  justify-items: center;
+}
+
+.creation-needed__item {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  row-gap: 10px;
+}
+
+.creation-needed__item:last-child figcaption {
+  font-size: 0;
+}
+
+.creation-needed__item img {
+  max-width: 60%;
+}
+
+.creation-needed__item figcaption {
+  text-align: center;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 767px) {
+  .creation-needed__item figcaption {
+    font-size: 16px;
+  }
+}
+
+.creation-needed__img {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 95px;
+  height: 95px;
 }
 /*# sourceMappingURL=style.css.map */
