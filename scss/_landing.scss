@@ -4,6 +4,8 @@
   }
 }
 
+// Banner Section
+
 .banner-logo {
   position: relative;
   min-height: 300px;
@@ -96,7 +98,7 @@
       padding: 15px 25px;
     }
     p {
-      font-size: 13px;
+      font-size: 14px;
       color: #f7f7f7;
       @media screen and (min-width: $mobile-width) {
         font-size: 17px;
@@ -104,6 +106,59 @@
       @media screen and (min-width: $tablet-width) {
         font-size: 19px;
       }
+    }
+  }
+}
+
+// Stages Section
+.creation-stages {
+  padding: 10px 20px;
+  display: grid;
+  @media screen and (min-width: $mobile-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+  &__left {
+    justify-self: center;
+  }
+  &__right {
+    display: grid;
+    row-gap: 20px;
+  }
+  &__img {
+    img {
+      width: 250px;
+    }
+  }
+  &__item {
+  }
+  &__number {
+    font-family: "Chalet-NewYorkNineteenEighty";
+    color: #171717;
+    font-size: 28px;
+  }
+  &__spoiler {
+    summary {
+      cursor: pointer;
+      font-family: "Chalet-NewYorkNineteenEighty";
+      font-size: 20px;
+      color: #171717;
+      @media screen and (min-width: $desktop-width) {
+        font-size: 25px;
+      }
+      &::marker {
+        font-size: 0;
+      }
+    }
+  }
+  &__description {
+    padding: 10px 0;
+    font-size: 14px;
+    @media screen and (min-width: $mobile-width) {
+      font-size: 17px;
+    }
+    @media screen and (min-width: $tablet-width) {
+      font-size: 19px;
     }
   }
 }

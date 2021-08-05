@@ -1958,7 +1958,7 @@ img {
 }
 
 .banner-logo__description p {
-  font-size: 13px;
+  font-size: 14px;
   color: #f7f7f7;
 }
 
@@ -1970,6 +1970,76 @@ img {
 
 @media screen and (min-width: 767px) {
   .banner-logo__description p {
+    font-size: 19px;
+  }
+}
+
+.creation-stages {
+  padding: 10px 20px;
+  display: -ms-grid;
+  display: grid;
+}
+
+@media screen and (min-width: 575px) {
+  .creation-stages {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+  }
+}
+
+.creation-stages__left {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.creation-stages__right {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+}
+
+.creation-stages__img img {
+  width: 250px;
+}
+
+.creation-stages__number {
+  font-family: "Chalet-NewYorkNineteenEighty";
+  color: #171717;
+  font-size: 28px;
+}
+
+.creation-stages__spoiler summary {
+  cursor: pointer;
+  font-family: "Chalet-NewYorkNineteenEighty";
+  font-size: 20px;
+  color: #171717;
+}
+
+@media screen and (min-width: 991px) {
+  .creation-stages__spoiler summary {
+    font-size: 25px;
+  }
+}
+
+.creation-stages__spoiler summary::marker {
+  font-size: 0;
+}
+
+.creation-stages__description {
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 575px) {
+  .creation-stages__description {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .creation-stages__description {
     font-size: 19px;
   }
 }
