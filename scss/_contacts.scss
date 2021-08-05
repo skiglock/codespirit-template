@@ -1,0 +1,172 @@
+.contacts {
+  &__location {
+    margin-bottom: 7%;
+    font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+    text-align: right;
+    &-contry {
+      font-size: 18px;
+      color: #252525;
+      @media screen and (min-width: $small-mobile-width) {
+        font-size: 20px;
+      }
+      @media screen and (min-width: $mobile-width) {
+        font-size: 23px;
+      }
+      @media screen and (min-width: $desktop-width) {
+        font-size: 25px;
+      }
+    }
+    &-city {
+      font-size: 17px;
+      color: #252525;
+      @media screen and (min-width: $small-mobile-width) {
+        font-size: 20px;
+      }
+      @media screen and (min-width: $mobile-width) {
+        font-size: 23px;
+      }
+      @media screen and (min-width: $desktop-width) {
+        font-size: 25px;
+      }
+    }
+  }
+  &__title {
+    font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+    color: #313131;
+    font-size: 18px;
+    margin-bottom: 2%;
+    margin-left: 3%;
+  }
+  &__social {
+    margin-top: 6%;
+    margin-left: 3%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 87px));
+    place-items: center;
+    justify-content: center;
+    &-link {
+      color: #252525;
+      font-size: 15px;
+      text-decoration: none;
+      transition: 0.1s linear;
+      &:hover {
+        color: rgba(#252525, 0.6);
+      }
+    }
+    @media screen and (min-width: $mobile-width) {
+      justify-content: start;
+    }
+  }
+}
+
+.form-block {
+  border-radius: 17px;
+  background-color: #48b08d;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.2);
+  @media screen and (min-width: $small-mobile-width) {
+    gap: 5%;
+    padding: 10px;
+  }
+  @media screen and (min-width: $small-mobile-width) {
+    padding: 30px;
+  }
+  @media screen and (min-width: $tablet-width) {
+    grid-template-columns: 2fr 2.5fr;
+    border-radius: 35px;
+  }
+  &__left {
+    padding-top: 26px;
+    padding-bottom: 7px;
+    padding-left: 43px;
+    padding-right: 43px;
+    @media screen and (min-width: $small-mobile-width) {
+      padding: 0;
+    }
+  }
+  &__right {
+    padding: 15px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+    @media screen and (min-width: $small-mobile-width) {
+      padding: 0;
+    }
+    @media screen and (min-width: $mobile-width) {
+      grid-row: span 1;
+      grid-column: span 1;
+    }
+  }
+  &__title {
+    text-shadow: 0px 0px 2px #252525;
+    color: #fff;
+    font-size: 17px;
+    @media screen and (min-width: $mobile-width) {
+      font-size: 18px;
+    }
+    @media screen and (min-width: $tablet-width) {
+      font-size: 22px;
+    }
+  }
+  &__phone {
+    margin-top: 2%;
+    box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.3);
+    padding: 8px 15px;
+    background-color: #fff;
+    border-radius: 20px;
+    @media screen and (min-width: $tablet-width) {
+      border-radius: 30px;
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-bottom: auto;
+    }
+  }
+  &__number {
+    color: #323232;
+    font-size: 18px;
+    @media screen and (min-width: $mobile-width) {
+      font-size: 22px;
+    }
+  }
+}
+
+.form {
+  display: grid;
+  gap: 15px;
+  @media screen and (min-width: $tablet-width) {
+    gap: 10px;
+  }
+  &__group {
+    font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+    display: grid;
+    gap: 2px;
+  }
+  &__label {
+    color: #fff;
+    font-size: 14px;
+    margin-left: 5%;
+  }
+  &__text {
+    box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.2);
+    border: none;
+    outline: none;
+    max-width: 100%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    &::placeholder {
+      color: #b9b8b8;
+    }
+  }
+  &__button {
+    @media screen and (min-width: $small-mobile-width) {
+      justify-self: center;
+    }
+  }
+  &__agree {
+    font-size: 10px;
+    color: #fff;
+  }
+}
