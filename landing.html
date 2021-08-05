@@ -53,7 +53,7 @@
           </header>
           <div class="site-content__item banner-logo">
             <div class="banner-logo__img">
-              <img src="./img/test.jpg" alt="" />
+              <img src="./img/test.png" alt="" />
             </div>
             <div class="banner-logo__header">
               <h1 class="banner-logo__title">LANDING PAGE</h1>
@@ -71,6 +71,7 @@
               </div>
             </div>
           </div>
+          <h2 class="creation-title">Этапы создания Landing Page</h2>
           <div class="site-content__item creation-stages">
             <div class="creation-stages__left">
               <div class="creation-stages__img">
@@ -172,6 +173,7 @@
               </button>
             </div>
           </div>
+          <h2 class="creation-title">Портфолио</h2>
           <div class="site-content__item creation-portfolio">
             <article class="creation-portfolio__work work">
               <div class="creation-portfolio__img work__img work__img--circle">
@@ -316,13 +318,19 @@
           </div>
           <div class="site-content__item creation-order">
             <div class="creation-order__left">
-              <h1 class="creation-order__title"></h1>
-              <p class="creation-order__description"></p>
-              <span class="creation-order__phone">8 900 000 00 00</span>
+              <h1 class="creation-order__title">Заказать landing</h1>
+              <p class="creation-order__description">
+                Заполните всё что знаете о проекте. Если у Вас возникли
+                трудности и вы не знаете с чего начать, позвоните и мы поможем
+                Вам разобраться!
+              </p>
+              <a href="tel:+79000000000" class="creation-order__phone"
+                >+7 900 000 00 00</a
+              >
             </div>
             <div class="creation-order__right">
               <form class="creation-order__form form" action="">
-                <div class="form__group">
+                <div class="form__group form__group--column">
                   <div class="form__subgroup">
                     <label for="form-name" class="form__label">Имя</label>
                     <input
@@ -365,7 +373,7 @@
                     >Расскажите о проекте</label
                   >
                   <textarea
-                    class="form__text"
+                    class="form__text form__text--large"
                     aria-label="Сообщение"
                     type="text"
                     name="message"
@@ -373,7 +381,10 @@
                     required
                   ></textarea>
                 </div>
-                <button class="form__button button" type="submit">
+                <button
+                  class="form__button button button--large button--white"
+                  type="submit"
+                >
                   Вперед!
                 </button>
                 <span class="form__agree">

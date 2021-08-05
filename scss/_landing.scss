@@ -1,6 +1,17 @@
 .site-content {
   &__item + &__item {
-    margin-top: 8%;
+    margin-top: 13%;
+  }
+}
+
+.creation-title {
+  text-align: center;
+  font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+  margin: 10% 0;
+  font-size: 20px;
+  @media screen and (min-width: $tablet-width) {
+    margin: 5% 0;
+    font-size: 25px;
   }
 }
 
@@ -10,6 +21,7 @@
   position: relative;
   min-height: 300px;
   color: #fff;
+  box-shadow: 5px 8px 0px rgba(#f7f7f7, 0.85);
   padding: 20px;
   display: grid;
   grid-template-rows: 1fr 2fr;
@@ -48,7 +60,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(#252525, 0.6);
+    background-color: rgba(#252525, 0.2);
     @media screen and (min-width: $tablet-width) {
       border-radius: 30px;
     }
@@ -60,6 +72,11 @@
   &__title {
     font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
     font-size: 20px;
+    background-color: #fff;
+    box-shadow: 5px 8px 0px rgba(#fff, 0.85);
+    color: #252525;
+    padding: 10px;
+    border-radius: 10px;
     @media screen and (min-width: $mobile-width) {
       font-size: 25px;
     }
@@ -115,14 +132,16 @@
 .creation {
   // Stages
   &-stages {
-    padding: 10px 20px;
+    padding: 20px;
     display: grid;
+    background-image: linear-gradient(#66cc99, #66cc99);
     @media screen and (min-width: $mobile-width) {
       grid-template-columns: 1fr 1fr;
       column-gap: 30px;
     }
     &__left {
       justify-self: center;
+      align-self: center;
     }
     &__right {
       display: grid;
@@ -134,10 +153,14 @@
       }
     }
     &__item {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 5px 8px 0px rgba(#fff, 0.85);
     }
     &__number {
       font-family: "Chalet-NewYorkNineteenEighty";
-      color: #171717;
+      color: #252525;
       font-size: 24px;
       @media screen and (min-width: $desktop-width) {
         font-size: 28px;
@@ -148,7 +171,7 @@
         cursor: pointer;
         font-family: "Chalet-NewYorkNineteenEighty";
         font-size: 20px;
-        color: #171717;
+        color: #252525;
         @media screen and (min-width: $desktop-width) {
           font-size: 25px;
         }
@@ -160,6 +183,7 @@
     &__description {
       padding: 10px 0;
       font-size: 14px;
+      color: #252525;
       @media screen and (min-width: $mobile-width) {
         font-size: 17px;
       }
@@ -173,6 +197,7 @@
   &-needed {
     position: relative;
     background-color: #bfd5e3;
+    box-shadow: 5px 8px 0px rgba(#bfd5e3, 0.85);
     border-radius: 20px;
     padding: 30px 10px;
     margin-left: 5%;
@@ -182,6 +207,7 @@
       content: "";
       color: #fff;
       background-color: #007785;
+      box-shadow: 5px 8px 0px rgba(#007785, 0.85);
       border-radius: 20px;
       padding: 7px 10px;
       top: -20px;
@@ -197,6 +223,7 @@
       content: "";
       color: #fff;
       background-color: $red_color;
+      box-shadow: 5px 8px 0px rgba($red_color, 0.85);
       border-radius: 20px;
       padding: 7px 10px;
       bottom: -20px;
@@ -248,6 +275,7 @@
     min-height: 220px;
     color: #fff;
     background-color: $red_color;
+    box-shadow: 5px 8px 0px rgba($red_color, 0.85);
     padding: 20px;
     display: grid;
     row-gap: 20px;
@@ -346,13 +374,15 @@
   }
   // Other
   &-other {
-    background-color: rgb(243, 241, 241);
+    background-color: #00cccc;
+    box-shadow: 5px 8px 0px rgba(#00cccc, 0.85);
     min-width: 200px;
     padding: 30px 20px;
     display: grid;
     row-gap: 20px;
     &__title {
       font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+      color: #fff;
     }
     &__list {
       list-style: none;
@@ -361,12 +391,12 @@
       grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
     }
     &__item {
-      background-color: #e7e7e7;
+      background-color: #f2f3f4;
       border-radius: 30px;
       padding: 5px 15px;
       transition: 0.1s linear;
       &:hover {
-        background-color: rgba(#e7e7e7, 0.7);
+        background-color: rgba(#f2f3f4, 0.9);
       }
     }
     &__link {
@@ -374,6 +404,89 @@
       text-decoration: none;
       font-size: 15px;
     }
+  }
+  &-order {
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #66cccc;
+    box-shadow: 5px 8px 0px rgba(#66cccc, 0.85);
+    display: grid;
+    gap: 20px;
+    @media screen and (min-width: $mobile-width) {
+      grid-template-columns: 1fr 1fr;
+      padding: 25px;
+      gap: 35px;
+    }
+    @media screen and (min-width: $tablet-width) {
+      padding: 35px;
+    }
+    &__title {
+      font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+      color: #252525;
+      font-size: 19px;
+      @media screen and (min-width: $mobile-width) {
+        font-size: 25px;
+      }
+      @media screen and (min-width: $mobile-width) {
+        font-size: 27px;
+      }
+    }
+    &__description {
+      line-height: 1.45;
+      color: #252525;
+      font-size: 15px;
+      @media screen and (min-width: $mobile-width) {
+        font-size: 17px;
+      }
+      @media screen and (min-width: $tablet-width) {
+        font-size: 19px;
+      }
+    }
+    &__phone {
+      color: #252525;
+      font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+      font-size: 19px;
+      text-decoration: none;
+      @media screen and (min-width: $mobile-width) {
+        font-size: 25px;
+      }
+    }
+    &__left {
+      display: grid;
+      align-items: center;
+      height: 50%;
+      gap: 10px;
+      justify-items: center;
+      @media screen and (min-width: $mobile-width) {
+        justify-items: start;
+      }
+    }
+    &__right {
+    }
+    &__form {
+    }
+  }
+}
+
+.form {
+  &__group {
+    &--column {
+    }
+    gap: 6px;
+  }
+  &__label {
+    text-shadow: 0px 0px 2px #252525;
+    color: #f7f7f7;
+  }
+  &__text {
+    &--large {
+      min-height: 200px;
+    }
+  }
+  &__subgroup {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 5px;
   }
 }
 
