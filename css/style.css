@@ -1958,7 +1958,7 @@ img {
 }
 
 .banner-logo__description p {
-  font-size: 14px;
+  font-size: 16px;
   color: #f7f7f7;
 }
 
@@ -2088,7 +2088,7 @@ img {
 }
 
 .creation-needed__subtitle {
-  font-family: "Chalet-NewYorkNineteenEighty";
+  font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
   font-size: 17px;
   text-align: center;
 }
@@ -2127,7 +2127,7 @@ img {
 
 @media screen and (min-width: 767px) {
   .creation-needed__item figcaption {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -2139,5 +2139,87 @@ img {
   background-color: #fff;
   width: 95px;
   height: 95px;
+}
+
+.creation-offer {
+  min-height: 250px;
+  color: #fff;
+  background-color: #eb563a;
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+}
+
+@media screen and (min-width: 459px) {
+  .creation-offer {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+  }
+}
+
+.creation-offer__left {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+}
+
+.creation-offer__right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
+}
+
+.creation-offer__title {
+  font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 767px) {
+  .creation-offer__title {
+    font-size: 24px;
+  }
+}
+
+.creation-offer__description {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 767px) {
+  .creation-offer__description {
+    font-size: 19px;
+  }
+}
+
+.creation-offer__price {
+  font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+  text-align: center;
+  font-size: 24px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 767px) {
+  .creation-offer__price {
+    font-size: 28px;
+  }
+}
+
+.creation-offer__button {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 459px) {
+  .creation-offer__button {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
 }
 /*# sourceMappingURL=style.css.map */

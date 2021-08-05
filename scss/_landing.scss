@@ -98,7 +98,7 @@
       padding: 15px 25px;
     }
     p {
-      font-size: 14px;
+      font-size: 16px;
       color: #f7f7f7;
       @media screen and (min-width: $mobile-width) {
         font-size: 17px;
@@ -203,7 +203,7 @@
       right: 0;
     }
     &__subtitle {
-      font-family: "Chalet-NewYorkNineteenEighty";
+      font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
       font-size: 17px;
       text-align: center;
     }
@@ -230,7 +230,7 @@
         text-align: center;
         font-size: 14px;
         @media screen and (min-width: $tablet-width) {
-          font-size: 16px;
+          font-size: 15px;
         }
       }
     }
@@ -241,6 +241,56 @@
       background-color: #fff;
       width: 95px;
       height: 95px;
+    }
+  }
+  // Offer
+  &-offer {
+    min-height: 250px;
+    color: #fff;
+    background-color: $red_color;
+    padding: 20px;
+    display: grid;
+    row-gap: 20px;
+    @media screen and (min-width: $small-mobile-width) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 10px;
+    }
+    &__left {
+      display: grid;
+      row-gap: 10px;
+    }
+    &__right {
+      display: grid;
+      grid-template-rows: 2fr 1fr;
+    }
+    &__title {
+      font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+      font-size: 20px;
+      @media screen and (min-width: $tablet-width) {
+        font-size: 24px;
+      }
+    }
+    &__description {
+      font-size: 16px;
+      @media screen and (min-width: $tablet-width) {
+        font-size: 19px;
+      }
+    }
+    &__price {
+      font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+      text-align: center;
+      font-size: 24px;
+      align-self: center;
+      @media screen and (min-width: $tablet-width) {
+        font-size: 28px;
+      }
+    }
+    &__button {
+      justify-self: end;
+      font-size: 16px;
+      @media screen and (min-width: $small-mobile-width) {
+        align-self: end;
+      }
     }
   }
 }
