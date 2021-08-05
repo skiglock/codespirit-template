@@ -305,9 +305,10 @@ img {
   &__header {
     display: grid;
     padding-top: 14px;
-    padding-bottom: 16px;
+    padding-bottom: 40px;
     justify-content: center;
     @media screen and (min-width: $mobile-width) {
+      padding-bottom: 20px;
       justify-content: end;
     }
   }
