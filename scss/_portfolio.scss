@@ -20,17 +20,6 @@
     display: grid;
     grid-template-columns: 1.4fr 2fr;
     gap: 30px;
-    .work__title {
-      font-size: 22px;
-    }
-    .work__category {
-      font-size: 12px;
-    }
-    .work__description {
-      p {
-        font-size: 16px;
-      }
-    }
   }
 
   &__left {
@@ -108,7 +97,7 @@
         }
       }
       p {
-        font-size: 14px;
+        font-size: 15px;
       }
     }
   }
