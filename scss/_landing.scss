@@ -344,6 +344,37 @@
       grid-row: span 3;
     }
   }
+  // Other
+  &-other {
+    background-color: rgb(243, 241, 241);
+    min-width: 200px;
+    padding: 30px 20px;
+    display: grid;
+    row-gap: 20px;
+    &__title {
+      font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+    }
+    &__list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+    }
+    &__item {
+      background-color: #e7e7e7;
+      border-radius: 30px;
+      padding: 5px 15px;
+      transition: 0.1s linear;
+      &:hover {
+        background-color: rgba(#e7e7e7, 0.7);
+      }
+    }
+    &__link {
+      color: #282828;
+      text-decoration: none;
+      font-size: 15px;
+    }
+  }
 }
 
 .work__img {

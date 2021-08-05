@@ -2293,6 +2293,46 @@ img {
   grid-row: span 3;
 }
 
+.creation-other {
+  background-color: #f3f1f1;
+  min-width: 200px;
+  padding: 30px 20px;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+}
+
+.creation-other__title {
+  font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+}
+
+.creation-other__list {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  -ms-grid-columns: (minmax(152px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+}
+
+.creation-other__item {
+  background-color: #e7e7e7;
+  border-radius: 30px;
+  padding: 5px 15px;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+.creation-other__item:hover {
+  background-color: rgba(231, 231, 231, 0.7);
+}
+
+.creation-other__link {
+  color: #282828;
+  text-decoration: none;
+  font-size: 15px;
+}
+
 .work__img--circle {
   -webkit-box-shadow: none;
           box-shadow: none;
