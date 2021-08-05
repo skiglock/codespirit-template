@@ -1,0 +1,119 @@
+.portfolio {
+  &-nav {
+    display: none;
+  }
+  &__works {
+    display: grid;
+    gap: 20px;
+    @media screen and (min-width: $small-mobile-width) {
+      grid-template-columns: repeat(auto-fit, minmax(226px, 1fr));
+    }
+    @media screen and (min-width: $tablet-width) {
+      gap: 30px;
+      grid-template-columns: auto;
+    }
+  }
+}
+
+.work {
+  @media screen and (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1.4fr 2fr;
+    gap: 30px;
+    .work__title {
+      font-size: 22px;
+    }
+    .work__category {
+      font-size: 12px;
+    }
+    .work__description {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__left {
+    align-self: center;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 3.76px 0.24px rgba(#252525, 0.35);
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    @media screen and (min-width: $tablet-width) {
+      grid-template-rows: min-content min-content 1fr min-content;
+      padding: 20px 30px;
+      border-radius: 30px;
+    }
+  }
+  &__right {
+    align-self: center;
+  }
+  &__title {
+    color: #252525;
+    text-align: center;
+    font-size: 23px;
+    font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+  }
+  &__categories {
+    display: none;
+    @media screen and (min-width: $tablet-width) {
+      display: grid;
+      color: #252525;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
+      gap: 5px;
+      justify-items: center;
+    }
+  }
+  &__category {
+    font-size: 10px;
+  }
+  &__img {
+    box-shadow: 0px 2px 3.76px 0.24px rgba(#252525, 0.35);
+    border-radius: 20px;
+    img {
+      border-radius: 20px;
+    }
+    &--mobile {
+      justify-self: center;
+      @media screen and (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+    &--tablet {
+      @media screen and (max-width: $tablet-width) {
+        display: none;
+      }
+    }
+  }
+  &__description {
+    display: none;
+    @media screen and (min-width: $tablet-width) {
+      display: block;
+      position: relative;
+      padding-left: 15px;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        background-color: $red_color;
+        width: 5px;
+        border-radius: 10px;
+        left: 0;
+        @media screen and (min-width: $tablet-width) {
+          width: 7px;
+        }
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  &__button {
+    font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
+    justify-self: end;
+  }
+}

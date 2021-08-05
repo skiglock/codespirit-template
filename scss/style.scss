@@ -3,10 +3,10 @@
 // Variables
 $red_color: #eb563a;
 
-$small-mobile-width: 460px;
-$mobile-width: 576px;
-$tablet-width: 768px;
-$desktop-width: 992px;
+$small-mobile-width: 459px;
+$mobile-width: 575px;
+$tablet-width: 767px;
+$desktop-width: 991px;
 
 *,
 *::before,
@@ -285,8 +285,8 @@ img {
     box-shadow: 0px 2px 2.67px 0.33px rgba(#252525, 0.1);
     border-radius: 20px;
     background-color: #fff;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 33px;
     @media screen and (min-width: $tablet-width) {
       max-width: 900px;
@@ -744,3 +744,6 @@ img {
 
 /* Contacts */
 @import "./contacts";
+
+/* Portfolio */
+@import "./portfolio";
