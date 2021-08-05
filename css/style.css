@@ -1320,7 +1320,7 @@ img {
 
 /* Contacts */
 .contacts__location {
-  margin-bottom: 7%;
+  margin-bottom: 10%;
   font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
   text-align: right;
 }
@@ -2121,8 +2121,15 @@ img {
           box-shadow: 5px 8px 0px rgba(191, 213, 227, 0.85);
   border-radius: 20px;
   padding: 30px 10px;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media screen and (min-width: 575px) {
+  .creation-needed {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 .creation-needed__header {
@@ -2419,7 +2426,7 @@ img {
 
 .creation-order {
   border-radius: 20px;
-  padding: 15px;
+  padding: 30px 15px;
   background-color: #66cccc;
   -webkit-box-shadow: 5px 8px 0px rgba(102, 204, 204, 0.85);
           box-shadow: 5px 8px 0px rgba(102, 204, 204, 0.85);

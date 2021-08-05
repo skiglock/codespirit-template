@@ -200,8 +200,12 @@
     box-shadow: 5px 8px 0px rgba(#bfd5e3, 0.85);
     border-radius: 20px;
     padding: 30px 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    @media screen and (min-width: $mobile-width) {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
     &__header {
       position: absolute;
       content: "";
@@ -407,7 +411,7 @@
   }
   &-order {
     border-radius: 20px;
-    padding: 15px;
+    padding: 30px 15px;
     background-color: #66cccc;
     box-shadow: 5px 8px 0px rgba(#66cccc, 0.85);
     display: grid;
