@@ -1416,8 +1416,8 @@ img {
 .form-block {
   border-radius: 17px;
   background-color: #48b08d;
-  -webkit-box-shadow: 5px 8px 0px rgba(72, 176, 141, 0.6);
-          box-shadow: 5px 8px 0px rgba(72, 176, 141, 0.6);
+  -webkit-box-shadow: 5px 8px 0px rgba(72, 176, 141, 0.85);
+          box-shadow: 5px 8px 0px rgba(72, 176, 141, 0.85);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(230px, 1fr))[auto-fit];
@@ -1808,7 +1808,7 @@ img {
 }
 
 .item-service--custom:nth-child(5) .item-service__description {
-  background-color: rgba(239, 187, 148, 0.9);
+  background-color: #efbb94;
   -webkit-box-shadow: 5px 8px 0px rgba(239, 187, 148, 0.85);
           box-shadow: 5px 8px 0px rgba(239, 187, 148, 0.85);
 }
@@ -1871,9 +1871,9 @@ img {
 .banner-logo {
   position: relative;
   min-height: 300px;
-  color: #fff;
-  -webkit-box-shadow: 5px 8px 0px rgba(247, 247, 247, 0.85);
-          box-shadow: 5px 8px 0px rgba(247, 247, 247, 0.85);
+  background-color: #fff;
+  -webkit-box-shadow: 5px 8px 0px rgba(255, 255, 255, 0.85);
+          box-shadow: 5px 8px 0px rgba(255, 255, 255, 0.85);
   padding: 20px;
   display: -ms-grid;
   display: grid;
@@ -2060,9 +2060,9 @@ img {
 }
 
 .creation-stages__item {
-  background-color: #fff;
   border-radius: 5px;
   padding: 10px;
+  background-color: #fff;
   -webkit-box-shadow: 5px 8px 0px rgba(255, 255, 255, 0.85);
           box-shadow: 5px 8px 0px rgba(255, 255, 255, 0.85);
 }

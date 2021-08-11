@@ -20,8 +20,7 @@
 .banner-logo {
   position: relative;
   min-height: 300px;
-  color: #fff;
-  box-shadow: 5px 8px 0px rgba(#f7f7f7, 0.85);
+  @include background-with-shadow(#fff);
   padding: 20px;
   display: grid;
   grid-template-rows: 1fr 2fr;
@@ -72,8 +71,7 @@
   &__title {
     font-family: "Chalet-NewYorkNineteenEighty", sans-serif;
     font-size: 20px;
-    background-color: #fff;
-    box-shadow: 5px 8px 0px rgba(#fff, 0.85);
+    @include background-with-shadow(#fff);
     color: #252525;
     padding: 10px;
     border-radius: 10px;
@@ -153,10 +151,9 @@
       }
     }
     &__item {
-      background-color: #fff;
       border-radius: 5px;
       padding: 10px;
-      box-shadow: 5px 8px 0px rgba(#fff, 0.85);
+      @include background-with-shadow(#fff);
     }
     &__number {
       font-family: "Chalet-NewYorkNineteenEighty";
@@ -196,8 +193,7 @@
   // Needed
   &-needed {
     position: relative;
-    background-color: #bfd5e3;
-    box-shadow: 5px 8px 0px rgba(#bfd5e3, 0.85);
+    @include background-with-shadow(#bfd5e3);
     border-radius: 20px;
     padding: 30px 10px;
     margin-left: 8%;
@@ -210,8 +206,7 @@
       position: absolute;
       content: "";
       color: #fff;
-      background-color: #007785;
-      box-shadow: 5px 8px 0px rgba(#007785, 0.85);
+      @include background-with-shadow(#007785);
       border-radius: 20px;
       padding: 7px 10px;
       top: -20px;
@@ -226,8 +221,7 @@
       position: absolute;
       content: "";
       color: #fff;
-      background-color: $red_color;
-      box-shadow: 5px 8px 0px rgba($red_color, 0.85);
+      @include background-with-shadow($red_color);
       border-radius: 20px;
       padding: 7px 10px;
       bottom: -20px;
@@ -278,8 +272,7 @@
   &-offer {
     min-height: 220px;
     color: #fff;
-    background-color: $red_color;
-    box-shadow: 5px 8px 0px rgba($red_color, 0.85);
+    @include background-with-shadow($red_color);
     padding: 20px;
     display: grid;
     row-gap: 20px;
@@ -378,8 +371,7 @@
   }
   // Other
   &-other {
-    background-color: #00cccc;
-    box-shadow: 5px 8px 0px rgba(#00cccc, 0.85);
+    @include background-with-shadow(#00cccc);
     min-width: 200px;
     padding: 30px 20px;
     display: grid;

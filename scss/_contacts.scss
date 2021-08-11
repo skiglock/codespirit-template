@@ -62,8 +62,7 @@
 
 .form-block {
   border-radius: 17px;
-  background-color: #48b08d;
-  box-shadow: 5px 8px 0px rgba(#48b08d, 0.6);
+  @include background-with-shadow(#48b08d);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   @media screen and (min-width: $small-mobile-width) {

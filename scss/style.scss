@@ -8,6 +8,12 @@ $mobile-width: 575px;
 $tablet-width: 767px;
 $desktop-width: 991px;
 
+// Mixins
+@mixin background-with-shadow($color) {
+  background-color: $color;
+  box-shadow: 5px 8px 0px rgba($color, 0.85);
+}
+
 *,
 *::before,
 *::after {
@@ -362,32 +368,26 @@ img {
   }
   &:nth-child(1) {
     .item-service__name {
-      background-color: #68b399;
-      box-shadow: 5px 8px 0px rgba(#68b399, 0.85);
+      @include background-with-shadow(#68b399);
     }
     .item-service__description {
-      background-color: #ffcb86;
-      box-shadow: 5px 8px 0px rgba(#ffcb86, 0.85);
+      @include background-with-shadow(#ffcb86);
     }
   }
   &:nth-child(2) {
     .item-service__name {
-      background-color: #efb051;
-      box-shadow: 5px 8px 0px rgba(#efb051, 0.85);
+      @include background-with-shadow(#efb051);
     }
     .item-service__description {
-      background-color: #6ac7cf;
-      box-shadow: 5px 8px 0px rgba(#6ac7cf, 0.85);
+      @include background-with-shadow(#6ac7cf);
     }
   }
   &:nth-child(3) {
     .item-service__name {
-      background-color: $red_color;
-      box-shadow: 5px 8px 0px rgba($red_color, 0.85);
+      @include background-with-shadow($red_color);
     }
     .item-service__description {
-      background-color: #2d8e6d;
-      box-shadow: 5px 8px 0px rgba(#2d8e6d, 0.85);
+      @include background-with-shadow(#2d8e6d);
     }
   }
   &__name {

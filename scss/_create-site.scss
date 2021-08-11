@@ -8,52 +8,42 @@
     }
     &:nth-child(2) {
       .item-service__name {
-        background-color: #007785;
-        box-shadow: 5px 8px 0px rgba(#007785, 0.85);
+        @include background-with-shadow(#007785);
       }
       .item-service__description {
-        background-color: #bfd5e3;
-        box-shadow: 5px 8px 0px rgba(#bfd5e3, 0.85);
+        @include background-with-shadow(#bfd5e3);
       }
     }
     &:nth-child(3) {
       .item-service__name {
-        background-color: #f39369;
-        box-shadow: 5px 8px 0px rgba(#f39369, 0.85);
+        @include background-with-shadow(#f39369);
       }
       .item-service__description {
-        background-color: #fccab4;
-        box-shadow: 5px 8px 0px rgba(#fccab4, 0.85);
+        @include background-with-shadow(#fccab4);
       }
     }
     &:nth-child(4) {
       .item-service__name {
-        background-color: #268a70;
-        box-shadow: 5px 8px 0px rgba(#268a70, 0.85);
+        @include background-with-shadow(#268a70);
       }
       .item-service__description {
-        background-color: #9ac6ba;
-        box-shadow: 5px 8px 0px rgba(#9ac6ba, 0.85);
+        @include background-with-shadow(#9ac6ba);
       }
     }
     &:nth-child(5) {
       .item-service__name {
-        background-color: #9a6c6e;
-        box-shadow: 5px 8px 0px rgba(#9a6c6e, 0.85);
+        @include background-with-shadow(#9a6c6e);
       }
       .item-service__description {
-        background-color: rgba(#efbb94, 0.9);
-        box-shadow: 5px 8px 0px rgba(#efbb94, 0.85);
+        @include background-with-shadow(#efbb94);
       }
     }
     &:nth-child(6) {
       .item-service__name {
-        background-color: #29343c;
-        box-shadow: 5px 8px 0px rgba(#29343c, 0.85);
+        @include background-with-shadow(#29343c);
       }
       .item-service__description {
-        background-color: #fedabf;
-        box-shadow: 5px 8px 0px rgba(#fedabf, 0.85);
+        @include background-with-shadow(#fedabf);
       }
     }
     & + .item-service--custom {
